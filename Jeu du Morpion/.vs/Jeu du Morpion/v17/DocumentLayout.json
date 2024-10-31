@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|c:\\users\\userlocal\\documents\\geii\\2eme annee\\ig\\projet morpion\\jeu du morpion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\messageo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|solutionrelative:messageo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\messagex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{091566FD-9707-4DBC-BE63-53AD79C6ABF4}|Jeu du Morpion.csproj|solutionrelative:messagex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageO.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\MessageO.cs",
+              "RelativeDocumentMoniker": "MessageO.cs",
+              "ToolTip": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\MessageO.cs [Design]",
+              "RelativeToolTip": "MessageO.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:02:49.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageX.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\MessageX.cs",
+              "RelativeDocumentMoniker": "MessageX.cs",
+              "ToolTip": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\MessageX.cs [Design]",
+              "RelativeToolTip": "MessageX.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T20:51:15.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\userlocal\\Documents\\GEII\\2eme Annee\\IG\\Projet Morpion\\Jeu du Morpion\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T18:13:52.292Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
