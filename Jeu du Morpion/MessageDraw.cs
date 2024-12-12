@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Jeu_du_Morpion
 {
-    public partial class MessageO : Form
+    public partial class MessageDraw : Form
     {
-        public MessageO()
+        public MessageDraw()
         {
             InitializeComponent();
         }
