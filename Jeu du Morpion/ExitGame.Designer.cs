@@ -1,5 +1,8 @@
-﻿namespace Jeu_du_Morpion
+﻿
+namespace Jeu_du_Morpion
 {
+    
+
     partial class ExitGame
     {
         /// <summary>

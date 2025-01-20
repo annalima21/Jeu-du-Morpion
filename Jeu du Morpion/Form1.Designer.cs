@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelToolBar = new System.Windows.Forms.Panel();
+            this.buttonAide = new System.Windows.Forms.Button();
+            this.buttonOptions = new System.Windows.Forms.Button();
+            this.buttonNouveauJeu = new System.Windows.Forms.Button();
             this.pictureMinimizer = new System.Windows.Forms.PictureBox();
             this.pictureFermer = new System.Windows.Forms.PictureBox();
             this.pictureIcon = new System.Windows.Forms.PictureBox();
@@ -54,13 +57,11 @@
             this.pictureX = new System.Windows.Forms.PictureBox();
             this.pictureO = new System.Windows.Forms.PictureBox();
             this.panelSettings = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.BoxReset = new System.Windows.Forms.PictureBox();
             this.buttonReset = new System.Windows.Forms.Button();
-            this.buttonNouveauJeu = new System.Windows.Forms.Button();
             this.panelToolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).BeginInit();
@@ -86,6 +87,9 @@
             // panelToolBar
             // 
             this.panelToolBar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelToolBar.Controls.Add(this.buttonAide);
+            this.panelToolBar.Controls.Add(this.buttonOptions);
+            this.panelToolBar.Controls.Add(this.buttonNouveauJeu);
             this.panelToolBar.Controls.Add(this.pictureMinimizer);
             this.panelToolBar.Controls.Add(this.pictureFermer);
             this.panelToolBar.Controls.Add(this.pictureIcon);
@@ -96,6 +100,48 @@
             this.panelToolBar.Size = new System.Drawing.Size(911, 30);
             this.panelToolBar.TabIndex = 0;
             this.panelToolBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // buttonAide
+            // 
+            this.buttonAide.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAide.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAide.Location = new System.Drawing.Point(239, 0);
+            this.buttonAide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAide.Name = "buttonAide";
+            this.buttonAide.Size = new System.Drawing.Size(107, 30);
+            this.buttonAide.TabIndex = 23;
+            this.buttonAide.Text = "Help";
+            this.buttonAide.UseVisualStyleBackColor = false;
+            this.buttonAide.Click += new System.EventHandler(this.buttonAide_Click);
+            // 
+            // buttonOptions
+            // 
+            this.buttonOptions.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonOptions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOptions.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOptions.Location = new System.Drawing.Point(134, 0);
+            this.buttonOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonOptions.Name = "buttonOptions";
+            this.buttonOptions.Size = new System.Drawing.Size(107, 30);
+            this.buttonOptions.TabIndex = 22;
+            this.buttonOptions.Text = "Options";
+            this.buttonOptions.UseVisualStyleBackColor = false;
+            this.buttonOptions.Click += new System.EventHandler(this.buttonOptions_Click);
+            // 
+            // buttonNouveauJeu
+            // 
+            this.buttonNouveauJeu.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonNouveauJeu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNouveauJeu.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNouveauJeu.Location = new System.Drawing.Point(29, 0);
+            this.buttonNouveauJeu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonNouveauJeu.Name = "buttonNouveauJeu";
+            this.buttonNouveauJeu.Size = new System.Drawing.Size(107, 30);
+            this.buttonNouveauJeu.TabIndex = 21;
+            this.buttonNouveauJeu.Text = "New Game";
+            this.buttonNouveauJeu.UseVisualStyleBackColor = false;
+            this.buttonNouveauJeu.Click += new System.EventHandler(this.buttonNouveauJeu_Click_1);
             // 
             // pictureMinimizer
             // 
@@ -302,7 +348,7 @@
             this.panelScore.Location = new System.Drawing.Point(511, 30);
             this.panelScore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelScore.Name = "panelScore";
-            this.panelScore.Size = new System.Drawing.Size(400, 265);
+            this.panelScore.Size = new System.Drawing.Size(400, 261);
             this.panelScore.TabIndex = 2;
             // 
             // Egal3
@@ -412,63 +458,48 @@
             // 
             // panelSettings
             // 
+            this.panelSettings.Controls.Add(this.label3);
             this.panelSettings.Controls.Add(this.label2);
             this.panelSettings.Controls.Add(this.label1);
-            this.panelSettings.Controls.Add(this.checkBox1);
-            this.panelSettings.Controls.Add(this.checkBox2);
             this.panelSettings.Controls.Add(this.BoxReset);
             this.panelSettings.Controls.Add(this.buttonReset);
-            this.panelSettings.Controls.Add(this.buttonNouveauJeu);
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSettings.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSettings.Location = new System.Drawing.Point(511, 295);
+            this.panelSettings.Location = new System.Drawing.Point(511, 291);
             this.panelSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(400, 247);
+            this.panelSettings.Size = new System.Drawing.Size(400, 251);
             this.panelSettings.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(132, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 42);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "level";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(247, 134);
+            this.label2.Location = new System.Drawing.Point(144, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 42);
+            this.label2.Size = new System.Drawing.Size(106, 42);
             this.label2.TabIndex = 20;
+            this.label2.Text = "mode";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(13, 134);
+            this.label1.Location = new System.Drawing.Point(82, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 42);
             this.label1.TabIndex = 19;
             this.label1.Text = "Game Mode:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox1.Location = new System.Drawing.Point(60, 179);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(99, 41);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "1x1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Click += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox2.Location = new System.Drawing.Point(206, 179);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(139, 41);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "1xCOM";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Click += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // BoxReset
             // 
@@ -486,7 +517,7 @@
             this.buttonReset.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonReset.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonReset.Location = new System.Drawing.Point(20, 77);
+            this.buttonReset.Location = new System.Drawing.Point(24, 15);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(360, 50);
@@ -494,20 +525,6 @@
             this.buttonReset.Text = "Clear";
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
-            // 
-            // buttonNouveauJeu
-            // 
-            this.buttonNouveauJeu.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonNouveauJeu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNouveauJeu.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonNouveauJeu.Location = new System.Drawing.Point(20, 15);
-            this.buttonNouveauJeu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonNouveauJeu.Name = "buttonNouveauJeu";
-            this.buttonNouveauJeu.Size = new System.Drawing.Size(360, 50);
-            this.buttonNouveauJeu.TabIndex = 0;
-            this.buttonNouveauJeu.Text = "New Game";
-            this.buttonNouveauJeu.UseVisualStyleBackColor = false;
-            this.buttonNouveauJeu.Click += new System.EventHandler(this.buttonNouveauJeu_Click);
             // 
             // Form1
             // 
@@ -578,13 +595,14 @@
         private System.Windows.Forms.Label labelPoint_Morpion;
         private System.Windows.Forms.Label labelPoint_X;
         private System.Windows.Forms.Button buttonReset;
-        private System.Windows.Forms.Button buttonNouveauJeu;
         private System.Windows.Forms.PictureBox BoxReset;
         private System.Windows.Forms.PictureBox Box1_3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonNouveauJeu;
+        private System.Windows.Forms.Button buttonOptions;
+        private System.Windows.Forms.Button buttonAide;
+        private System.Windows.Forms.Label label3;
     }
 }
 

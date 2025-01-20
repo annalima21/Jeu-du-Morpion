@@ -61,6 +61,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageDraw.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="NewGame.Designer.cs">
       <DependentUpon>NewGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ExitGame.resx">
@@ -92,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageDraw.resx">
       <DependentUpon>MessageDraw.cs</DependentUpon>
@@ -105,20 +120,23 @@
     <EmbeddedResource Include="NewGame.resx">
       <DependentUpon>NewGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -129,25 +147,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\O_tic-tac-toe.png" />
+    <EmbeddedResource Include="Resources\O_tic-tac-toe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tic-tac-toe.ico.png" />
+    <EmbeddedResource Include="Resources\tic-tac-toe.ico.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\X_tic-tac-toe.png" />
+    <EmbeddedResource Include="Resources\X_tic-tac-toe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngwing.com.png" />
+    <EmbeddedResource Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PikPng.com_windows-icon-png_1407361.png" />
+    <EmbeddedResource Include="Resources\PikPng.com_windows-icon-png_1407361.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Capture.PNG" />
+    <EmbeddedResource Include="Resources\Capture.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimizar.PNG" />
+    <EmbeddedResource Include="Resources\minimizar.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

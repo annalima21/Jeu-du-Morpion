@@ -13,3 +13,20 @@ C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpionteste\Projet Morpi
 C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpionteste\Projet Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.pdb
 C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpionteste\Projet Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.exe
 C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpionteste\Projet Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.pdb
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.exe.config
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.exe
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.pdb
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.csproj.AssemblyReference.cache
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.ExitGame.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.Form1.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.Help.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.MessageDraw.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.MessageO.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.MessageX.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.NewGame.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.Options.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu_du_Morpion.Properties.Resources.resources
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.csproj.GenerateResource.cache
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.csproj.CoreCompileInputs.cache
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.exe
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.pdb
