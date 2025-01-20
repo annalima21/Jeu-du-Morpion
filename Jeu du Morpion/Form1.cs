@@ -3,6 +3,9 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.IO;
+using System.Media;
 
 namespace Jeu_du_Morpion
 {
@@ -13,6 +16,7 @@ namespace Jeu_du_Morpion
         int selectedMode, selectedLevel;
         public int count = 0;
         public int countChecker = 0;
+        int i = 0;
 
 
         // Déclare un tableau bidimensionnel de 3 lignes et 3 colonnes
@@ -93,16 +97,21 @@ namespace Jeu_du_Morpion
             if (countChecker % 2 == 0)
             {
                 Checker = true; // Jouer commence
-                Console.WriteLine("jouer commence accept");
-
+                Console.WriteLine("C'est au tour du joueur X de commencer.");
+                pictureO.BackColor = SystemColors.Window;
+                pictureX.BackColor = Color.FromArgb(200, 173, 255, 173);
             }
             else if (countChecker % 2 != 0)
             {
+                Console.WriteLine("Le joueur O commence cette fois.");
+
                 Checker = false; // O commence
 
+                pictureX.BackColor = SystemColors.Window;
+                pictureO.BackColor = Color.FromArgb(200, 255, 182, 193);
                 if (selectedMode == 1)
                 {
-                    Console.WriteLine("ordinateur commence accept");
+                    Console.WriteLine("L'ordinateur réfléchit...");
                     EasyOrdinateur(); // teste si ordicommence
                 }
             }
@@ -110,62 +119,71 @@ namespace Jeu_du_Morpion
         }
 
 
-        //Sound Play
-        /*void SoundX()
+        void SoundX()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpion\Sounds\SoundX.wav"))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "SoundX.wav");
+            using (var soundPlayer = new SoundPlayer(path))
             {
                 soundPlayer.Play();
             }
         }
+
         void SoundO()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpion\Sounds\SoundO.wav"))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "SoundO.wav");
+            using (var soundPlayer = new SoundPlayer(path))
             {
                 soundPlayer.Play();
             }
         }
+
         void WinnerX()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpion\Sounds\WinnerX.wav"))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "WinnerX.wav");
+            using (var soundPlayer = new SoundPlayer(path))
             {
                 soundPlayer.Play();
             }
         }
+
         void WinnerO()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpion\Sounds\WinnerO.wav"))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "WinnerO.wav");
+            using (var soundPlayer = new SoundPlayer(path))
             {
                 soundPlayer.Play();
             }
         }
+
         void DrawGame()
         {
-            using (var soundPlayer = new SoundPlayer(@"C:\Users\userlocal\Documents\GEII\2eme Annee\IG\Projet Morpion\Sounds\DrawGame.wav"))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "DrawGame.wav");
+            using (var soundPlayer = new SoundPlayer(path))
             {
                 soundPlayer.Play();
             }
-        }*/
+        }
+
 
         //Go for Different Forms Show
         void MessageXShow()
         {
-            MessageX messageX = new MessageX();
-            messageX.ShowDialog();
-
+            Console.WriteLine("Joueur X est le grand gagnant !");
+            MessageX messageXForm = new MessageX(this.pictureX.Image);  // Utilise 'this' pour accéder à pictureO
+            messageXForm.ShowDialog();
         }
         void MessageOShow()
         {
-            MessageO messageO = new MessageO();
-            messageO.ShowDialog();
-
+            Console.WriteLine("Joueur O est le grand gagnant !");
+            MessageO messageOForm = new MessageO(this.pictureO.Image);  // Utilise 'this' pour accéder à pictureO
+            messageOForm.ShowDialog();
         }
         void MessageDrawShow()
         {
-            MessageDraw messageDraw = new MessageDraw();
-            messageDraw.ShowDialog();
-
-
+            Console.WriteLine("Match nul ! Personne ne gagne.");
+            MessageDraw messageDrawForm = new MessageDraw(this.pictureMorpion.Image);  // Utilise 'this' pour accéder à pictureO
+            messageDrawForm.ShowDialog();
+            i = 0;
         }
         void NewGame()
         {
@@ -196,10 +214,12 @@ namespace Jeu_du_Morpion
             //Player X Wins
             if (Box1_1.Image == pictureX.Image && Box1_2.Image == pictureX.Image && Box1_3.Image == pictureX.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box1_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box1_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box1_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box1_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -209,10 +229,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box2_1.Image == pictureX.Image && Box2_2.Image == pictureX.Image && Box2_3.Image == pictureX.Image)
             {
-                Box2_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box2_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -221,10 +243,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box3_1.Image == pictureX.Image && Box3_2.Image == pictureX.Image && Box3_3.Image == pictureX.Image)
             {
-                Box3_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box3_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -233,10 +257,11 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_1.Image == pictureX.Image && Box2_1.Image == pictureX.Image && Box3_1.Image == pictureX.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -245,10 +270,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_2.Image == pictureX.Image && Box2_2.Image == pictureX.Image && Box3_2.Image == pictureX.Image)
             {
-                Box1_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box1_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -257,10 +284,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_3.Image == pictureX.Image && Box2_3.Image == pictureX.Image && Box3_3.Image == pictureX.Image)
             {
-                Box1_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box1_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -269,10 +298,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_1.Image == pictureX.Image && Box2_2.Image == pictureX.Image && Box3_3.Image == pictureX.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                //WinnerX();
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -281,10 +312,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_3.Image == pictureX.Image && Box2_2.Image == pictureX.Image && Box3_1.Image == pictureX.Image)
             {
-                Box1_3.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box2_2.BackColor = Color.FromArgb(20, 250, 49, 74);
-                Box3_1.BackColor = Color.FromArgb(20, 250, 49, 74);
-                // WinnerX();
+                i = 0;
+                Box1_3.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box2_2.BackColor = Color.FromArgb(200, 173, 255, 173);
+                Box3_1.BackColor = Color.FromArgb(200, 173, 255, 173);
+                WinnerX();
+                Thread.Sleep(500);
                 MessageXShow();
                 PlusOne = int.Parse(labelPoint_X.Text);
                 labelPoint_X.Text = Convert.ToString(PlusOne + 1);
@@ -294,9 +327,12 @@ namespace Jeu_du_Morpion
             //Player O wins
             if (Box1_1.Image == pictureO.Image && Box1_2.Image == pictureO.Image && Box1_3.Image == pictureO.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box1_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box1_3.BackColor = Color.FromArgb(20, 0, 185, 255);
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box1_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box1_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -305,10 +341,11 @@ namespace Jeu_du_Morpion
             }
             else if (Box2_1.Image == pictureO.Image && Box2_2.Image == pictureO.Image && Box2_3.Image == pictureO.Image)
             {
-                Box2_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //  WinnerO();
+                i = 0;
+                Box2_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -317,10 +354,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box3_1.Image == pictureO.Image && Box3_2.Image == pictureO.Image && Box3_3.Image == pictureO.Image)
             {
-                Box3_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //  WinnerO();
+                i = 0;
+                Box3_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -329,10 +368,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_1.Image == pictureO.Image && Box2_1.Image == pictureO.Image && Box3_1.Image == pictureO.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                // WinnerO();
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -341,10 +382,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_2.Image == pictureO.Image && Box2_2.Image == pictureO.Image && Box3_2.Image == pictureO.Image)
             {
-                Box1_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //  WinnerO();
+                i = 0;
+                Box1_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -353,10 +396,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_3.Image == pictureO.Image && Box2_3.Image == pictureO.Image && Box3_3.Image == pictureO.Image)
             {
-                Box1_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //WinnerO();
+                i = 0;
+                Box1_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -365,10 +410,12 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_1.Image == pictureO.Image && Box2_2.Image == pictureO.Image && Box3_3.Image == pictureO.Image)
             {
-                Box1_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //  WinnerO();
+                i = 0;
+                Box1_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
@@ -377,16 +424,19 @@ namespace Jeu_du_Morpion
             }
             else if (Box1_3.Image == pictureO.Image && Box2_2.Image == pictureO.Image && Box3_1.Image == pictureO.Image)
             {
-                Box1_3.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box2_2.BackColor = Color.FromArgb(20, 0, 185, 255);
-                Box3_1.BackColor = Color.FromArgb(20, 0, 185, 255);
-                //  WinnerO();
+                i = 0;
+                Box1_3.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box2_2.BackColor = Color.FromArgb(200, 255, 182, 193);
+                Box3_1.BackColor = Color.FromArgb(200, 255, 182, 193);
+                WinnerO();
+                Thread.Sleep(500);
                 MessageOShow();
                 PlusOne = int.Parse(labelPoints_O.Text);
                 labelPoints_O.Text = Convert.ToString(PlusOne + 1);
                 BoxNotWork();
                 return true;
             }
+
             //DrawGame
             else if (Box1_1.Image != BoxReset.Image &&
                       Box1_2.Image != BoxReset.Image &&
@@ -398,7 +448,8 @@ namespace Jeu_du_Morpion
                       Box3_2.Image != BoxReset.Image &&
                       Box3_3.Image != BoxReset.Image)
             {
-                //  DrawGame();
+                DrawGame();
+                Thread.Sleep(500);
                 MessageDrawShow();
                 PlusOne = int.Parse(labelPoint_Morpion.Text);
                 labelPoint_Morpion.Text = Convert.ToString(PlusOne + 1);
@@ -433,52 +484,28 @@ namespace Jeu_du_Morpion
             PictureBox selectedPictureBox;
             string nomPictureBox = "Box" + i.ToString() + "_" + j.ToString();
             selectedPictureBox = (PictureBox)panelGame.Controls[nomPictureBox];
-            Console.WriteLine("entre dans la fonction ordinateur" + " " + nomPictureBox);
             if (selectedPictureBox.Image == null)
             {
-                Console.WriteLine("acepter fonction ordinateur" + " " + nomPictureBox);
-
                 Thread.Sleep(500);
                 selectedPictureBox.Image = pictureO.Image; // Ou pictureX.Image selon le choix
                 selectedPictureBox.Enabled = false;
+                SoundO();
+                Thread.Sleep(500);
                 tableau[i - 1, j - 1] = 'O';
                 ImprimirTableau();
-
                 selectedPictureBox.Refresh();
-                Application.DoEvents();
-
-
-                // SoundO();
                 Checker = !Checker; // Alterne le joueur
-                Console.WriteLine(Checker);
-
                 return; // Quitte la fonction après avoir joué
-            }
-            else if (selectedPictureBox.Image != null)
-            {
-                Console.WriteLine("Casa já ocupada: " + nomPictureBox);
-            }
-            else
-            {
-                Console.WriteLine("Box não encontrada: " + nomPictureBox);
             }
         }
         void EasyOrdinateur()
         {
             Random rand = new Random(); // Générateur de nombres aléatoires
 
-
-            // Boucle principale pour essayer de jouer
-            // while (true)
-            //  {
             int x = rand.Next(1, 4); // Génère un nombre aléatoire entre 1 et 3
             int y = rand.Next(1, 4);
             Ordinateur(x, y);
-            Console.WriteLine("sortie de la fonction ordinateur");
             return;
-            //  }
-
-
         }
         void MediumOrdinateur()
         {
@@ -487,8 +514,11 @@ namespace Jeu_du_Morpion
             if (VerifierLignesEtColonnes('X')) return; // Deuxième priorité : bloquer l'adversaire
 
             // Vérification des diagonales
-          //  if (VerifierDiagonales('O')) return; // Priorité : gagner
-          //  if (VerifierDiagonales('X')) return; // Deuxième priorité : bloquer l'adversaire
+            if (selectedLevel == 3)
+            {
+                if (VerifierDiagonales('O')) return; // Priorité : gagner
+                if (VerifierDiagonales('X')) return; // Deuxième priorité : bloquer l'adversaire
+            }
 
             // Si aucune action prioritaire n'est trouvée, jouer dans une case vide aléatoire
             EasyOrdinateur();
@@ -516,7 +546,7 @@ namespace Jeu_du_Morpion
                     if (compteurLigne == 2 && videLigne != -1)
                     {
                         //   tableau[i, videLigne] = 'O'; // Le joueur ordinateur joue dans la ligne
-                        Console.WriteLine("verification ligne true");
+                        Console.WriteLine("Verification ligne true");
                         Ordinateur(i + 1, videLigne + 1); // Met à jour l'interface
                         return true;
                     }
@@ -525,7 +555,7 @@ namespace Jeu_du_Morpion
                     if (compteurColonne == 2 && videColonne != -1)
                     {
                         //   tableau[videColonne, i] = 'O'; // Le joueur ordinateur joue dans la colonne
-                        Console.WriteLine("verification column true");
+                        Console.WriteLine("Verification column true");
                         Ordinateur(videColonne + 1, i + 1); // Met à jour l'interface
                         return true;
                     }
@@ -536,7 +566,8 @@ namespace Jeu_du_Morpion
                 return false;
             }
 
-            /*bool VerifierDiagonales(char symbole)
+
+            bool VerifierDiagonales(char symbole)
             {
                 // Diagonale principale (0,0 -> 1,1 -> 2,2)
                 int compteurPrincipale = 0;
@@ -551,7 +582,7 @@ namespace Jeu_du_Morpion
                 if (compteurPrincipale == 2 && videPrincipale != -1)
                 {
                     //  tableau[videPrincipale, videPrincipale] = 'O'; // Met à jour le tableau
-                    Console.WriteLine("verification diagonale true");
+                    Console.WriteLine("Verification diagonale true");
                     Ordinateur(videPrincipale + 1, videPrincipale + 1); // Met à jour l'interface
                     return true;
                 }
@@ -569,17 +600,18 @@ namespace Jeu_du_Morpion
                 if (compteurSecondaire == 2 && videSecondaire != -1)
                 {
                     //  tableau[videSecondaire, 2 - videSecondaire] = 'O'; // Met à jour le tableau
-                    Console.WriteLine("verification diagonale 2 true");
+                    Console.WriteLine("Verification diagonale 2 true");
                     Ordinateur(videSecondaire + 1, (2 - videSecondaire) + 1); // Met à jour l'interface
                     return true;
                 }
                 // Aucun alignement trouvé
                 return false;
-            }*/
+            }
+
         }
         void HardOrdinateur()
         {
-            Console.WriteLine("Entrando no modo HardOrdinateur...");
+            Console.WriteLine("Mode Insane...");
 
             int meilleurScore = int.MinValue; // Initialise le score maximum
             int meilleurX = -1, meilleurY = -1; // Coordonnées du meilleur mouvement
@@ -599,11 +631,8 @@ namespace Jeu_du_Morpion
                         // Appelle l'algorithme Minimax pour calculer le score du mouvement
                         int score = Minimax(false); // false signifie que c'est le tour du joueur humain
 
-                        Console.WriteLine($"Score calculé pour tableau[{i},{j}]: {score}");
-
                         // Annule le mouvement simulé
                         tableau[i, j] = ' ';
-                        Console.WriteLine($"Annulation du mouvement: tableau[{i},{j}] = ' '");
 
                         // Compare le score obtenu avec le meilleur score actuel
                         if (score > meilleurScore)
@@ -632,28 +661,22 @@ namespace Jeu_du_Morpion
 
         int Minimax(bool isMaximizing)
         {
-            Console.WriteLine($"Entrée dans Minimax: isMaximizing = {isMaximizing}");
-
             // Vérifie si un joueur a gagné ou si le jeu est une égalité
             if (CheckWinner('O'))
             {
-                Console.WriteLine("Minimax: L'ordinateur gagne");
                 return 1;  // L'ordinateur gagne
             }
             if (CheckWinner('X'))
             {
-                Console.WriteLine("Minimax: Le joueur gagne");
                 return -1; // Le joueur humain gagne
             }
             if (IsDraw())
             {
-                Console.WriteLine("Minimax: Match nul");
                 return 0;  // Partie nulle
             }
 
             if (isMaximizing)
             {
-                Console.WriteLine("Minimax: Tour de l'ordinateur (maximisation)");
                 int meilleurScore = int.MinValue;
 
                 for (int i = 0; i < 3; i++)
@@ -666,7 +689,6 @@ namespace Jeu_du_Morpion
                             int score = Minimax(false); // Appelle récursivement Minimax pour minimiser
                             tableau[i, j] = ' '; // Annule le mouvement
                             meilleurScore = Math.Max(score, meilleurScore);
-                            Console.WriteLine($"Minimax (maximisation): Score actuel: {score}, Meilleur score: {meilleurScore}");
                         }
                     }
                 }
@@ -674,7 +696,6 @@ namespace Jeu_du_Morpion
             }
             else
             {
-                Console.WriteLine("Minimax: Tour du joueur (minimisation)");
                 int meilleurScore = int.MaxValue;
 
                 for (int i = 0; i < 3; i++)
@@ -687,7 +708,6 @@ namespace Jeu_du_Morpion
                             int score = Minimax(true); // Appelle récursivement Minimax pour maximiser
                             tableau[i, j] = ' '; // Annule le mouvement
                             meilleurScore = Math.Min(score, meilleurScore);
-                            Console.WriteLine($"Minimax (minimisation): Score actuel: {score}, Meilleur score: {meilleurScore}");
                         }
                     }
                 }
@@ -698,8 +718,6 @@ namespace Jeu_du_Morpion
         // Vérifie si un joueur a gagné
         bool CheckWinner(char symbole)
         {
-            Console.WriteLine($"CheckWinner: Vérifie si {symbole} a gagné");
-
             for (int i = 0; i < 3; i++)
             {
                 if (tableau[i, 0] == symbole && tableau[i, 1] == symbole && tableau[i, 2] == symbole) return true;
@@ -714,7 +732,6 @@ namespace Jeu_du_Morpion
         // Vérifie si toutes les cases sont remplies (égalité)
         bool IsDraw()
         {
-            Console.WriteLine("IsDraw: Vérifie si toutes les cases sont remplies");
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -727,6 +744,7 @@ namespace Jeu_du_Morpion
 
         void Jouer(int x, int y)
         {
+            i = 1;
             // Entrée : x (int) - Coordonnée de la ligne
             // Entrée : y (int) - Coordonnée de la colonne
 
@@ -746,12 +764,12 @@ namespace Jeu_du_Morpion
                     // `pictureX` (type : PictureBox) - Contient l'image du joueur X
                     selectedPictureBox.Image = pictureX.Image; // Affecte l'image associée au joueur X
                     selectedPictureBox.Enabled = false; // Désactive la PictureBox (type : bool)
-
+                    SoundX(); // Appelle la méthode SoundX() pour jouer un son (type : void)
+                    Thread.Sleep(500);
                     tableau[x - 1, y - 1] = 'X'; //Actualiser tableau avec le choix du jouer
                     ImprimirTableau();
                     // `count` (type : int) - Compteur des coups joués
                     count++; // Incrémente le compteur de coups
-                    //SoundX(); // Appelle la méthode SoundX() pour jouer un son (type : void)
                     Checker = !Checker;
                 }
                 else if (selectedMode == 0 && !Checker) // Si Checker est faux, c'est au tour du joueur O
@@ -759,19 +777,12 @@ namespace Jeu_du_Morpion
                     // `pictureO` (type : PictureBox) - Contient l'image du joueur O
                     selectedPictureBox.Image = pictureO.Image; // Affecte l'image associée au joueur O
                     selectedPictureBox.Enabled = false; // Désactive la PictureBox (type : bool)
-
+                    SoundO();
+                    Thread.Sleep(500);
                     tableau[x - 1, y - 1] = 'O';//Actualiser tableau avec le choix du jouer
                     ImprimirTableau();
                     Checker = !Checker;
                 }
-
-                // Alterne le joueur
-                // `Checker` (type : bool) - Change de `true` à `false` ou vice-versa
-                //Checker = !Checker;
-
-                // Vérifie le score ou les conditions de victoire
-                Console.WriteLine(countChecker);
-
 
                 // Si le mode est "joueur contre ordinateur" et que c'est au tour de l'ordinateur de jouer
                 while (selectedMode == 1 && !Checker && count <= 4)
@@ -781,21 +792,19 @@ namespace Jeu_du_Morpion
                         EasyOrdinateur(); // Appelle la méthode `Ordinateur()` (type : void) pour exécuter le tour du CPU
                     }
 
-                    if (selectedLevel == 2)
+                    if (selectedLevel == 2 || selectedLevel == 3)
                     {
                         MediumOrdinateur();
                     }
 
-                    if (selectedLevel == 3)
+                    if (selectedLevel == 4)
                     {
                         HardOrdinateur();
                     }
+
                 }
 
                 Score();
-                Console.WriteLine(countChecker);
-
-
             }
         }
 
@@ -805,6 +814,14 @@ namespace Jeu_du_Morpion
             OpenOptions();
             Tableau();
 
+            pictureO.BackColor = SystemColors.Window;
+            pictureX.BackColor = Color.FromArgb(200, 173, 255, 173);
+
+            // Initialiser le Timer
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000; // Vérifier toutes les secondes (1000 ms)
+            timer.Tick += Timer_Tick;
+            timer.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -897,6 +914,11 @@ namespace Jeu_du_Morpion
         }
         private void buttonReset_Click(object sender, EventArgs e)
         {
+            if (i == 1)
+            {
+                MessageBox.Show("Veuillez d'abord terminer la partie en cours !");
+                return; // Empêche le démarrage d'une nouvelle partie
+            }
             BoxWork();
             ResetBox();
         }
@@ -906,17 +928,113 @@ namespace Jeu_du_Morpion
             Options options = new Options();
             if (options.ShowDialog() == DialogResult.OK)
             {
+
+                pictureX.Image = options.ImageChoisie1;
+                pictureO.Image = options.ImageChoisie2;
+                //timer.Start();
+
                 selectedMode = options.mode;
                 selectedLevel = options.level;
-                if      (selectedMode == 0) label2.Text = "PvP" ;
-                else if (selectedMode == 1) label2.Text = "PvC";
-                else if (selectedLevel == 1) label3.Text = "Easy";
-                else if (selectedLevel == 2) label3.Text = "Medium";
-                else if (selectedLevel == 3) label3.Text = "Hard";
-                else label3.Text = "You may select a Game Mode";
+                if (selectedMode == 0) label2.Text = "Player vs Player";
+                else if (selectedMode == 1) label2.Text = "Player vs Computer";
+
+                if (selectedLevel == 1) label3.Text = "Easy Level";
+                else if (selectedLevel == 2) label3.Text = "Medium Level";
+                else if (selectedLevel == 3) label3.Text = "Hard Level";
+                else if (selectedLevel == 4) label3.Text = "Insane Level";
             }
 
 
+        }
+        private bool CheckImages()
+        {
+            // Vérifier que les PictureBox "pictureO" et "pictureX" contiennent des images
+            if (pictureO.Image == null || pictureX.Image == null)
+            {
+                return false; // Si l'une des images est absente, retourne false
+            }
+            return true; // Les deux images sont présentes
+        }
+
+        // Paramètres pour la taille et la position des images
+        // Positions des images (X, Y)
+        private int xPos1 = 10, yPos1 = 10;  // Position initiale de la première image
+        private int xPos2 = 190, yPos2 = 190; // Position initiale de la deuxième image
+        private int xPos3 = 376, yPos3 = 10; // Position initiale de la troisième image
+        private int xPos4 = 376, yPos4 = 376; // Position initiale de la quatrième image
+
+        // Taille des images
+        private int imageWidth = 130;
+        private int imageHeight = 130;
+
+        // Fonction de sélection de la deuxième image (pour pictureBox2)
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Cette méthode peut être utilisée pour d'autres interactions si nécessaire
+        }
+
+
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Vérifier si l'image a changé
+            if (pictureMorpion.Image != lastImage)
+            {
+                lastImage = pictureMorpion.Image;
+                CopierImage(); // Copier l'image dans pictureIcone
+            }
+            // Rajout !!!!!!!!!!!!!!!!!!!!!!!
+            if (pictureO.Image != null && pictureX.Image != null)
+            {
+                // Créer une copie de l'image actuelle de pictureBox3 (l'image de fond)
+                Bitmap baseImage = new Bitmap(pictureMorpion.Image);
+
+                using (Graphics g = Graphics.FromImage(baseImage))
+                {
+                    // Superposer l'image de pictureBox1 avec ses coordonnées modifiables
+                    g.DrawImage(pictureO.Image, xPos1, yPos1, imageWidth, imageHeight); // Première image
+
+                    // Superposer l'image de pictureBox2 avec ses coordonnées modifiables
+                    g.DrawImage(pictureO.Image, xPos2, yPos2, imageWidth, imageHeight); // Deuxième image
+
+                    // Superposer l'image de pictureBox2 avec ses coordonnées modifiables
+                    g.DrawImage(pictureX.Image, xPos3, yPos3, imageWidth, imageHeight); // Troisième image
+
+                    // Superposer l'image de pictureBox2 avec ses coordonnées modifiables
+                    g.DrawImage(pictureX.Image, xPos4, yPos4, imageWidth, imageHeight); // Quatrième image
+                }
+
+                // Réafficher l'image combinée dans pictureBox3
+                pictureMorpion.Image = baseImage;
+            }
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Arrêter le Timer lorsqu'on ferme la fenêtre
+            timer.Stop();
+        }
+        // Méthode pour définir l'image de pictureMorpion et copier l'image dans pictureIcone
+        //private Timer timer;
+        private System.Windows.Forms.Timer timer;  // Spécifier le Timer de Windows Forms
+        private Image lastImage = null;
+
+        private void CopierImage()
+        {
+            if (pictureMorpion.Image != null)
+            {
+                pictureIcon.Image = (Image)pictureMorpion.Image.Clone();
+            }
+            else
+            {
+                pictureIcon.Image = null; // Effacer l'image de pictureIcone si pictureMorpion n'a pas d'image
+            }
+        }
+        public Image GetPictureBoxImage()
+        {
+            return pictureO.Image;
         }
 
     }

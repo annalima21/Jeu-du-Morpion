@@ -179,7 +179,7 @@
             // 
             this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureIcon.ErrorImage = null;
-            this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_ico;
+            this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
             this.pictureIcon.InitialImage = null;
             this.pictureIcon.Location = new System.Drawing.Point(0, 0);
             this.pictureIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -399,7 +399,7 @@
             // 
             this.labelPoint_X.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoint_X.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelPoint_X.Location = new System.Drawing.Point(223, 87);
+            this.labelPoint_X.Location = new System.Drawing.Point(223, 0);
             this.labelPoint_X.Name = "labelPoint_X";
             this.labelPoint_X.Size = new System.Drawing.Size(122, 81);
             this.labelPoint_X.TabIndex = 3;
@@ -410,7 +410,7 @@
             // 
             this.labelPoints_O.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoints_O.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelPoints_O.Location = new System.Drawing.Point(223, -12);
+            this.labelPoints_O.Location = new System.Drawing.Point(223, 81);
             this.labelPoints_O.Name = "labelPoints_O";
             this.labelPoints_O.Size = new System.Drawing.Size(122, 100);
             this.labelPoints_O.TabIndex = 3;
@@ -420,7 +420,7 @@
             // pictureMorpion
             // 
             this.pictureMorpion.ErrorImage = null;
-            this.pictureMorpion.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_ico;
+            this.pictureMorpion.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
             this.pictureMorpion.InitialImage = null;
             this.pictureMorpion.Location = new System.Drawing.Point(72, 195);
             this.pictureMorpion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -432,10 +432,11 @@
             // 
             // pictureX
             // 
+            this.pictureX.BackColor = System.Drawing.SystemColors.Window;
             this.pictureX.ErrorImage = null;
             this.pictureX.Image = global::Jeu_du_Morpion.Properties.Resources.X_tic_tac_toe;
             this.pictureX.InitialImage = null;
-            this.pictureX.Location = new System.Drawing.Point(72, 108);
+            this.pictureX.Location = new System.Drawing.Point(72, 16);
             this.pictureX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureX.Name = "pictureX";
             this.pictureX.Size = new System.Drawing.Size(60, 60);
@@ -448,7 +449,7 @@
             this.pictureO.ErrorImage = null;
             this.pictureO.Image = global::Jeu_du_Morpion.Properties.Resources.O_tic_tac_toe;
             this.pictureO.InitialImage = null;
-            this.pictureO.Location = new System.Drawing.Point(72, 16);
+            this.pictureO.Location = new System.Drawing.Point(72, 108);
             this.pictureO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureO.Name = "pictureO";
             this.pictureO.Size = new System.Drawing.Size(60, 60);
@@ -474,28 +475,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(132, 179);
+            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(55, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 42);
+            this.label3.Size = new System.Drawing.Size(117, 37);
             this.label3.TabIndex = 21;
             this.label3.Text = "level";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(144, 120);
+            this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.Location = new System.Drawing.Point(16, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 42);
+            this.label2.Size = new System.Drawing.Size(97, 37);
             this.label2.TabIndex = 20;
             this.label2.Text = "mode";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(82, 69);
+            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Location = new System.Drawing.Point(85, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 42);
             this.label1.TabIndex = 19;
@@ -517,12 +518,12 @@
             this.buttonReset.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonReset.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonReset.Location = new System.Drawing.Point(24, 15);
+            this.buttonReset.Location = new System.Drawing.Point(23, 174);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(360, 50);
             this.buttonReset.TabIndex = 0;
-            this.buttonReset.Text = "Clear";
+            this.buttonReset.Text = "Clear Board";
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 

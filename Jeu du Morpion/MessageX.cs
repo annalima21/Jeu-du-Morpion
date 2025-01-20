@@ -13,10 +13,14 @@ namespace Jeu_du_Morpion
 {
     public partial class MessageX : Form
     {
-       
-        public MessageX()
+        // Déclarez la variable d'instance _image (si elle n'est pas déjà définie ailleurs dans la classe)
+        private Image _image;
+
+        public MessageX(Image image)
         {
             InitializeComponent();
+            _image = image;  // Utilisez l'image passée dans le constructeur
+            pictureBox1.Image = _image ?? global::Jeu_du_Morpion.Properties.Resources.O_tic_tac_toe;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

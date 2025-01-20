@@ -133,6 +133,16 @@ namespace Jeu_du_Morpion.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap tic_tac_toe_vide {
+            get {
+                object obj = ResourceManager.GetObject("tic-tac-toe_vide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap X_tic_tac_toe {
             get {
                 object obj = ResourceManager.GetObject("X_tic-tac-toe", resourceCulture);
