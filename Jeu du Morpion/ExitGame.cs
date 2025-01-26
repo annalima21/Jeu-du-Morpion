@@ -29,7 +29,8 @@ namespace Jeu_du_Morpion
 
         private void buttonNo_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void buttonYes_Click(object sender, EventArgs e)

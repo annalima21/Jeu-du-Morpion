@@ -21,14 +21,47 @@ namespace Jeu_du_Morpion
         public string image2Path;
 
 
-        public Options()
+        public Options(int previousMode, int previousLevel)
         {
             InitializeComponent();
 
-            if (!checkBox1.Checked && !checkBox2.Checked) checkBox2.Checked = true;
-            if (!checkBox3.Checked && !checkBox4.Checked && !checkBox1.Checked && !checkBox6.Checked) checkBox3.Checked = true;
-            
+            // Restaurar seleções anteriores
+            mode = previousMode;
+            level = previousLevel;
+
+            RestorePreviousSelections();
         }
+
+        private void RestorePreviousSelections()
+        {
+            // Verificar o modo anterior
+            if (mode == 0)
+            {
+                checkBox1.Checked = true; // PvP
+            }
+            else if (mode == 1)
+            {
+                checkBox2.Checked = true; // PvC
+            }
+
+            // Verificar o nível anterior
+            switch (level)
+            {
+                case 1:
+                    checkBox3.Checked = true; // Easy
+                    break;
+                case 2:
+                    checkBox4.Checked = true; // Medium
+                    break;
+                case 3:
+                    checkBox5.Checked = true; // Hard
+                    break;
+                case 4:
+                    checkBox6.Checked = true; // Insane
+                    break;
+            }
+        }
+
 
         private void pictureFermer_Click(object sender, EventArgs e)
         {
@@ -101,8 +134,8 @@ namespace Jeu_du_Morpion
 
         private void pictureFermer_Click_1(object sender, EventArgs e)
         {
-            ExitGame exitGame = new ExitGame();
-            exitGame.ShowDialog();
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
                      
 

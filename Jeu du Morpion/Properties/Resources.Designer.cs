@@ -123,6 +123,36 @@ namespace Jeu_du_Morpion.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap pngwing_com__1_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tableau {
+            get {
+                object obj = ResourceManager.GetObject("tableau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tableau_origin {
+            get {
+                object obj = ResourceManager.GetObject("tableau_origin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap tic_tac_toe_ico {
             get {
                 object obj = ResourceManager.GetObject("tic-tac-toe.ico", resourceCulture);
@@ -133,9 +163,29 @@ namespace Jeu_du_Morpion.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap tic_tac_toe_ico_1 {
+            get {
+                object obj = ResourceManager.GetObject("tic-tac-toe.ico_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap tic_tac_toe_vide {
             get {
                 object obj = ResourceManager.GetObject("tic-tac-toe_vide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tic_tac_toe1 {
+            get {
+                object obj = ResourceManager.GetObject("tic-tac-toe1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

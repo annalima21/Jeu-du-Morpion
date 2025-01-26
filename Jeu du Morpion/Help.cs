@@ -124,6 +124,11 @@ namespace Jeu_du_Morpion
         {
             this.Close();
         }
+
+        private void panelToolBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
    
 }

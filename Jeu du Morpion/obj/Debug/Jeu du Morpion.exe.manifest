@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Jeu du Morpion.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Jeu du Morpion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Jeu du Morpion.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Options de manifeste UAC
+          Pour changer le niveau du contrôle de compte d'utilisateur Windows, remplacez le
+          nœud requestedExecutionLevel par l'une des propositions suivantes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Pour utiliser la virtualisation des fichiers et du Registre afin d'assurer
+         une compatibilité ascendante, supprimez le nœud requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jeu du Morpion.exe" size="1095672">
+      <assemblyIdentity name="Jeu du Morpion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>K9U294Ku33bFdCUUG4gFG/2F6NU1iLui/ADSEGBvCtE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Images\Afrique_tic-tac-toe.png" size="16678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xcUqxdAuIQ4vtesJbaPIj8u/SlkHPUJrt8EPbcHtwJk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\algérie_tic-tac-toe.png" size="24412">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PHWJ8PsrOGzo34Uy52JMQHEA5b+8ZNnXgRi7i3xK3WQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Amérique_tit-tac-toe.png" size="24631">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wkRNKPLm/0134O8A2OXzaNfAFIDTxFK+eSQCEPhPsB4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Andore_tic-tac-toe.png" size="60042">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g5ieSNRQLvVpRLsuGo6fkcoccld+eCABaG5Qbx8spEs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Angleterre_tic-tac_toe.png" size="13849">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P2PyUSUWHD1pSJGvAblbtNSNvLAK+Pmpkv4QFMmgISs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Argentine_tic-tac-toe.png" size="39972">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xk8kKcwUzuRmKJeC0ETZS9JK338qF1dO+CoXVaI8wJs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Armenie_tic-tac-toe.png" size="12687">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VS4aoRSTe3OXBfZag1izcILlxnBBg+MtRmROG+BOGoA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Australie_tic-tac-toe.png" size="24510">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0sYGYYcstOSZy/rqaATTRhdIF8/Puf2rr15SESXEdE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Autriche_tic-tac-toe.png" size="12547">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l/qlJTUjCavK3v6kqWyGvVp+K30g8NnQfj/P2tsMh3I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Azerbaijan_tic-tac-toe.png" size="26652">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eAFGz8bv46oqrm9/mpQ4aHrUhMbLnREWhiPAo1ca5aA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Belgique_tic-tac-toe.png" size="11598">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wZVmVZsqiEsK8GpuRQTprUXeynasajBnjyEUS4stpiU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Bielorussie_tic-tac-toe.png" size="24367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fEOxiyJd7afN9kEajl55Y2mwc/Nr5j8sd/LkhdRlF+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\brasil_tic-tac-toe.png" size="41780">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9uH4mdTgPSnqqDVKnt/Bc8fuOdU0LT46wfe9XgpTMhg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Bulgarie_tic-tac-toe.png" size="13122">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3dp4+jCA15wGNXOWnEGpT+u8SW0IuT6DOvGji2+pFgw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Canada_tic-tac-toe.png" size="17651">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>raT2Z6obHmKtJ+cMvZxmAKvZQ9N9B4A0V8BhIAh98og=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Chine_tic-tac-toe.png" size="22668">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>501ysnl5fwSGxGWaZGNUx4elX3w/Bi98qR1vw14Jf5U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Chypre-du-nord_tic-tac-toe.png" size="20294">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AYhRW+TjzZFwlYHOXfhqLEkOGz66rKoP/W3cV7Ne7bU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Croatie_tic-tac-toe.png" size="16199">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SGPwZ4zPAgQapO6AywOmO7Wn04QtEzW2pS9ikmNJHxQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Danemark_tic-tac-toe.png" size="16773">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SgI+Avxa1nbY6b3zsMqAGlRIuKum/7vuhb8ms1dGBxw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\espagne_tic-tac-toe.png" size="50946">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>11Hydh+EiUf5qNNP8F2IJJ2VIgZHjaXt5vqNtqPdc0A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Estonie_tic-tac-toe.png" size="12480">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>konH8NwFaO/jG0rb6P6O/8iiopV2J02OiAtEogL6Q5Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Finland_tic-tac-toe.png" size="13873">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rj5hP8yVOFNf8eU2GGPc056FspB4if4PjPVeDp58aYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\france_tic-tac-toe.png" size="16395">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DQdfguK09Pp2IQGulUiKQl0t+fQMW34SCVRQnGNYeb8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Georgie_tic-tac-toe.png" size="14638">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aoOCIK3Ve73eAP4I2VD3IOaY/Cbtg2l3beNZJj2mOZg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Hongris_tic-tac-toe.png" size="15462">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AQnI4ofLHC8T6VlyfnpeXFCuKHndjuPijbY/izCKl/I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Inde_tic-tac-toe.png" size="31805">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4FeSR08sc0iui052HM3Pv+ipHyOTpbcjShmFgR80Q5o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Islande_tic-tac-toe.png" size="17045">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6g0M0zOMuWeDO01GLhAZUlg44SPsdBdgkfGDs6Wv88U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\italy_tic-tac-toe.png" size="14960">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>i4drcwlrdEk3xykibR2Jgf6P2BchuPUpJt/1SFTFWyk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Kazakhstan_tic-tac-toe.png" size="71518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ilFYGyiAol/E/FgjQU4qc4U2CRVlw+X/UWTKd9ftqjs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Kosovo_tic-tac-toe.png" size="36885">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mJtzDSWAKgNBTI3T4VeHFyw5aA7hOf3KYTfzT8yrEmA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Lettonie_tic-tac-toe.png" size="16154">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a4CqUOhFDsV6K0XKCOn/sVHaAbSjInLwSGzMpbCJZXk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Liechtenstein_tic-tac-toe.png" size="39657">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>N9lNnQXEngNEYmEGEebuvQZMCfeGHxZ4xQFALtR3OYg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Lituanie_tic-tac-toe.png" size="18637">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XgF52mHmrA9nX7N33EP9VZBC9PI5gKdRU1xgvZLEJlc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Luxembourg_tic-tac-toe.png" size="15377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6y+sWCHFPvxv1b1kkviYMDS7y1Q/NwJP4+qPvNB5PEk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Macedoine-du-nord_tic-tac-toe.png" size="28631">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iwHROu1pdTVhDWhAgLrxUUUKnW/CuD+TyvPYma8Melw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Malte_tic-tac-toe.png" size="15346">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/QNREgaFfHsdWyiUahR5vFDQSHBopXlD1mFnN+MJNsQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Mexique_tic-tac-toe.png" size="47631">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+lp/dSawCrgK+aspEahED+Lnvwna0hV0ZYX07tOar5E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Moldavie_tic-tac-toe.png" size="53581">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r829jJuiNHCt1EYNOdALpnwEX5K5IZVz8KaXi86WtfA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Monaco_tic-tac-toe.png" size="12672">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rio3aqcqwilyl13EzxL/MgW+oHGRwPcbLyL97n22rDU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Mongolie_tic-tac-toe.png" size="16311">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Zk3n/x0NKdfQ1craqw07AfT6ZZQRYH8ySox5g/wBWyg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Montenegro_tic-tac-toe.png" size="20542">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dNqgtyigtS9gqLioqeszJk2XgZZR374IZIGb9SQGaRQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\morocco_tic-tac-toe.png" size="22612">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0TobYoEtQRHF/SVw0GDSOXp3305G4QRveafaMu8IHz0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\O_tic-tac-toe.png" size="5050">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wjBc79fQsGEoEzWp4BIsMt1wWlsJFLB6Sc+HhZScF3o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\portugal_tic-tac-toe.png" size="59527">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zqUUjA4yXcdxk/nCK9J9JJcj0JW4Bl9jGoq9QXJ6u14=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Republique-tcheque_tic-tac-toe.png" size="16235">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>miD2SAKM8Y8srHkT6eb3TDEo1qPB89JVCEk9Sk2/xdw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Royaume_Unis_tic-tac-toe.png" size="27044">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MQJuTSs5xXxeTbdSmQJiJR9CdzQuwqZ1l+r6UMZ5dj0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Russie_tic-tac-toe.png" size="15316">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NhG+nFb9CTSlN6+GfMV7tis9CUHq09dRf3OC185uLvQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Saint-Marin_tic-tac-toe.png" size="23523">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hKQw26rDa6Q9TQO/ZobnSYiS5bS3MwXhL3oP8yy9Qq0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Slovénie_tic-tac-toe.png" size="17436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UN38yCHx8axhgfrgZ0nsLcS7MzTE1aaEBejTyc9Am+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Suisse_tic-tac-toe.png" size="12568">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T0IXZxTytDOUNbUEeOTEGcIKOFcGiGc9OcBVMClRHbY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\tunisie_tic-tac-toe.png" size="25885">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Trx4eMcA9I4cZ4O0eToqAEdMxGqQrAkA7Z/clFPwo14=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\turkey_tic-tac-toe.png" size="21885">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ekxxji9u7fzoPxyGw4EZz55mGEzis30iJouZIBM+aUI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Ukraine_tic-tac-toe.png" size="14690">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>At8BVzF6qwHDn0KGxf30aw/2qFyZvFtLyWranTHWMIM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\X_tic-tac-toe.png" size="4005">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IfT58CTO6QvqorCeGbco5RkugTIpUH6Y3O7ADo3vFIM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Jeu du Morpion.exe.config" size="184">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>X+GtgC9o18R9u9jmAWK6iKuu0WLaXTgchdPkk1MRli4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sounds\DrawGame.wav" size="593626">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>POwMTqefcIODv5ggJGZV/zdZTLMEhrpBcX8NcOgXaPo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sounds\SoundO.wav" size="345938">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8w0MaVRLjfuGzJd+Wcx29I5XAiIgfbqMvDHl1O8Yd2c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sounds\SoundX.wav" size="307538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2iJiVpz5Hv5fQ3xglsdey/xvShJZF3OIfzEj2vsh48U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sounds\WinnerO.wav" size="728020">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HRMZI+W/pRZVwnvCRQZ64mCwpnV42nVr7m7REcsfaTE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Sounds\WinnerX.wav" size="686436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dKVxe1HGrZayA3jL+x4p/S4n3eXyaH2BtbtHCUWWqME=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

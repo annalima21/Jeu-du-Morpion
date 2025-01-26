@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelToolBar = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonAide = new System.Windows.Forms.Button();
             this.buttonOptions = new System.Windows.Forms.Button();
             this.buttonNouveauJeu = new System.Windows.Forms.Button();
-            this.pictureMinimizer = new System.Windows.Forms.PictureBox();
-            this.pictureFermer = new System.Windows.Forms.PictureBox();
-            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.panelGame = new System.Windows.Forms.Panel();
             this.Box3_3 = new System.Windows.Forms.PictureBox();
             this.Box2_3 = new System.Windows.Forms.PictureBox();
@@ -53,19 +53,17 @@
             this.labelPoint_Morpion = new System.Windows.Forms.Label();
             this.labelPoint_X = new System.Windows.Forms.Label();
             this.labelPoints_O = new System.Windows.Forms.Label();
+            this.panelSettings = new System.Windows.Forms.Panel();
+            this.BoxReset = new System.Windows.Forms.PictureBox();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.pictureMorpion = new System.Windows.Forms.PictureBox();
             this.pictureX = new System.Windows.Forms.PictureBox();
             this.pictureO = new System.Windows.Forms.PictureBox();
-            this.panelSettings = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BoxReset = new System.Windows.Forms.PictureBox();
-            this.buttonReset = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureMinimizer = new System.Windows.Forms.PictureBox();
+            this.pictureFermer = new System.Windows.Forms.PictureBox();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.panelToolBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
             this.panelGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Box3_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box2_3)).BeginInit();
@@ -77,21 +75,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box1_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1_1)).BeginInit();
             this.panelScore.SuspendLayout();
+            this.panelSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BoxReset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMorpion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureO)).BeginInit();
-            this.panelSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BoxReset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelToolBar
             // 
-            this.panelToolBar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelToolBar.Controls.Add(this.buttonAide);
-            this.panelToolBar.Controls.Add(this.buttonOptions);
-            this.panelToolBar.Controls.Add(this.buttonNouveauJeu);
+            this.panelToolBar.BackColor = System.Drawing.Color.DarkBlue;
+            this.panelToolBar.Controls.Add(this.pictureBox2);
+            this.panelToolBar.Controls.Add(this.label2);
             this.panelToolBar.Controls.Add(this.pictureMinimizer);
             this.panelToolBar.Controls.Add(this.pictureFermer);
+            this.panelToolBar.Controls.Add(this.label3);
+            this.panelToolBar.Controls.Add(this.label1);
             this.panelToolBar.Controls.Add(this.pictureIcon);
             this.panelToolBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelToolBar.Location = new System.Drawing.Point(0, 0);
@@ -101,15 +104,46 @@
             this.panelToolBar.TabIndex = 0;
             this.panelToolBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(545, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 23);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "mode";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(716, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 23);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "level";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(35, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 26);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Jeu du Morpion";
+            // 
             // buttonAide
             // 
             this.buttonAide.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonAide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAide.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAide.Location = new System.Drawing.Point(239, 0);
+            this.buttonAide.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonAide.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.buttonAide.Location = new System.Drawing.Point(23, 171);
             this.buttonAide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAide.Name = "buttonAide";
-            this.buttonAide.Size = new System.Drawing.Size(107, 30);
+            this.buttonAide.Size = new System.Drawing.Size(360, 50);
             this.buttonAide.TabIndex = 23;
             this.buttonAide.Text = "Help";
             this.buttonAide.UseVisualStyleBackColor = false;
@@ -119,11 +153,12 @@
             // 
             this.buttonOptions.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonOptions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOptions.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOptions.Location = new System.Drawing.Point(134, 0);
+            this.buttonOptions.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonOptions.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonOptions.Location = new System.Drawing.Point(23, 116);
             this.buttonOptions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOptions.Name = "buttonOptions";
-            this.buttonOptions.Size = new System.Drawing.Size(107, 30);
+            this.buttonOptions.Size = new System.Drawing.Size(360, 50);
             this.buttonOptions.TabIndex = 22;
             this.buttonOptions.Text = "Options";
             this.buttonOptions.UseVisualStyleBackColor = false;
@@ -133,61 +168,16 @@
             // 
             this.buttonNouveauJeu.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonNouveauJeu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNouveauJeu.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNouveauJeu.Location = new System.Drawing.Point(29, 0);
+            this.buttonNouveauJeu.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonNouveauJeu.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonNouveauJeu.Location = new System.Drawing.Point(23, 8);
             this.buttonNouveauJeu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNouveauJeu.Name = "buttonNouveauJeu";
-            this.buttonNouveauJeu.Size = new System.Drawing.Size(107, 30);
+            this.buttonNouveauJeu.Size = new System.Drawing.Size(360, 50);
             this.buttonNouveauJeu.TabIndex = 21;
             this.buttonNouveauJeu.Text = "New Game";
             this.buttonNouveauJeu.UseVisualStyleBackColor = false;
             this.buttonNouveauJeu.Click += new System.EventHandler(this.buttonNouveauJeu_Click_1);
-            // 
-            // pictureMinimizer
-            // 
-            this.pictureMinimizer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureMinimizer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureMinimizer.ErrorImage = null;
-            this.pictureMinimizer.Image = global::Jeu_du_Morpion.Properties.Resources.minimizar;
-            this.pictureMinimizer.InitialImage = null;
-            this.pictureMinimizer.Location = new System.Drawing.Point(853, 0);
-            this.pictureMinimizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureMinimizer.Name = "pictureMinimizer";
-            this.pictureMinimizer.Size = new System.Drawing.Size(29, 30);
-            this.pictureMinimizer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureMinimizer.TabIndex = 2;
-            this.pictureMinimizer.TabStop = false;
-            this.pictureMinimizer.Click += new System.EventHandler(this.pictureMinimizer_Click);
-            // 
-            // pictureFermer
-            // 
-            this.pictureFermer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureFermer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureFermer.ErrorImage = null;
-            this.pictureFermer.Image = global::Jeu_du_Morpion.Properties.Resources.Capture;
-            this.pictureFermer.InitialImage = null;
-            this.pictureFermer.Location = new System.Drawing.Point(882, 0);
-            this.pictureFermer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureFermer.Name = "pictureFermer";
-            this.pictureFermer.Size = new System.Drawing.Size(29, 30);
-            this.pictureFermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureFermer.TabIndex = 1;
-            this.pictureFermer.TabStop = false;
-            this.pictureFermer.Click += new System.EventHandler(this.pictureFermer_Click);
-            // 
-            // pictureIcon
-            // 
-            this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureIcon.ErrorImage = null;
-            this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
-            this.pictureIcon.InitialImage = null;
-            this.pictureIcon.Location = new System.Drawing.Point(0, 0);
-            this.pictureIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureIcon.Name = "pictureIcon";
-            this.pictureIcon.Size = new System.Drawing.Size(29, 30);
-            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureIcon.TabIndex = 0;
-            this.pictureIcon.TabStop = false;
             // 
             // panelGame
             // 
@@ -345,17 +335,18 @@
             this.panelScore.Controls.Add(this.pictureX);
             this.panelScore.Controls.Add(this.pictureO);
             this.panelScore.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelScore.Location = new System.Drawing.Point(511, 30);
             this.panelScore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelScore.Name = "panelScore";
-            this.panelScore.Size = new System.Drawing.Size(400, 261);
+            this.panelScore.Size = new System.Drawing.Size(400, 283);
             this.panelScore.TabIndex = 2;
             // 
             // Egal3
             // 
             this.Egal3.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Egal3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Egal3.Location = new System.Drawing.Point(158, 176);
+            this.Egal3.Location = new System.Drawing.Point(168, 180);
             this.Egal3.Name = "Egal3";
             this.Egal3.Size = new System.Drawing.Size(77, 83);
             this.Egal3.TabIndex = 3;
@@ -366,7 +357,7 @@
             // 
             this.Egal2.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Egal2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Egal2.Location = new System.Drawing.Point(158, 87);
+            this.Egal2.Location = new System.Drawing.Point(168, 100);
             this.Egal2.Name = "Egal2";
             this.Egal2.Size = new System.Drawing.Size(77, 81);
             this.Egal2.TabIndex = 3;
@@ -377,7 +368,7 @@
             // 
             this.Egal1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Egal1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Egal1.Location = new System.Drawing.Point(158, 0);
+            this.Egal1.Location = new System.Drawing.Point(168, 26);
             this.Egal1.Name = "Egal1";
             this.Egal1.Size = new System.Drawing.Size(77, 76);
             this.Egal1.TabIndex = 3;
@@ -388,7 +379,7 @@
             // 
             this.labelPoint_Morpion.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoint_Morpion.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelPoint_Morpion.Location = new System.Drawing.Point(223, 179);
+            this.labelPoint_Morpion.Location = new System.Drawing.Point(233, 183);
             this.labelPoint_Morpion.Name = "labelPoint_Morpion";
             this.labelPoint_Morpion.Size = new System.Drawing.Size(122, 76);
             this.labelPoint_Morpion.TabIndex = 3;
@@ -399,7 +390,7 @@
             // 
             this.labelPoint_X.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoint_X.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelPoint_X.Location = new System.Drawing.Point(223, 0);
+            this.labelPoint_X.Location = new System.Drawing.Point(233, 26);
             this.labelPoint_X.Name = "labelPoint_X";
             this.labelPoint_X.Size = new System.Drawing.Size(122, 81);
             this.labelPoint_X.TabIndex = 3;
@@ -410,97 +401,27 @@
             // 
             this.labelPoints_O.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoints_O.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelPoints_O.Location = new System.Drawing.Point(223, 81);
+            this.labelPoints_O.Location = new System.Drawing.Point(233, 94);
             this.labelPoints_O.Name = "labelPoints_O";
             this.labelPoints_O.Size = new System.Drawing.Size(122, 100);
             this.labelPoints_O.TabIndex = 3;
             this.labelPoints_O.Text = "0";
             this.labelPoints_O.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureMorpion
-            // 
-            this.pictureMorpion.ErrorImage = null;
-            this.pictureMorpion.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
-            this.pictureMorpion.InitialImage = null;
-            this.pictureMorpion.Location = new System.Drawing.Point(72, 195);
-            this.pictureMorpion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureMorpion.Name = "pictureMorpion";
-            this.pictureMorpion.Size = new System.Drawing.Size(60, 60);
-            this.pictureMorpion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureMorpion.TabIndex = 2;
-            this.pictureMorpion.TabStop = false;
-            // 
-            // pictureX
-            // 
-            this.pictureX.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureX.ErrorImage = null;
-            this.pictureX.Image = global::Jeu_du_Morpion.Properties.Resources.X_tic_tac_toe;
-            this.pictureX.InitialImage = null;
-            this.pictureX.Location = new System.Drawing.Point(72, 16);
-            this.pictureX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureX.Name = "pictureX";
-            this.pictureX.Size = new System.Drawing.Size(60, 60);
-            this.pictureX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureX.TabIndex = 1;
-            this.pictureX.TabStop = false;
-            // 
-            // pictureO
-            // 
-            this.pictureO.ErrorImage = null;
-            this.pictureO.Image = global::Jeu_du_Morpion.Properties.Resources.O_tic_tac_toe;
-            this.pictureO.InitialImage = null;
-            this.pictureO.Location = new System.Drawing.Point(72, 108);
-            this.pictureO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureO.Name = "pictureO";
-            this.pictureO.Size = new System.Drawing.Size(60, 60);
-            this.pictureO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureO.TabIndex = 0;
-            this.pictureO.TabStop = false;
-            // 
             // panelSettings
             // 
-            this.panelSettings.Controls.Add(this.label3);
-            this.panelSettings.Controls.Add(this.label2);
-            this.panelSettings.Controls.Add(this.label1);
+            this.panelSettings.Controls.Add(this.buttonNouveauJeu);
             this.panelSettings.Controls.Add(this.BoxReset);
+            this.panelSettings.Controls.Add(this.buttonOptions);
             this.panelSettings.Controls.Add(this.buttonReset);
+            this.panelSettings.Controls.Add(this.buttonAide);
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSettings.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSettings.Location = new System.Drawing.Point(511, 291);
+            this.panelSettings.Location = new System.Drawing.Point(511, 313);
             this.panelSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(400, 251);
+            this.panelSettings.Size = new System.Drawing.Size(400, 229);
             this.panelSettings.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(55, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 37);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "level";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(16, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 37);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "mode";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(85, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 42);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Game Mode:";
             // 
             // BoxReset
             // 
@@ -517,8 +438,9 @@
             // 
             this.buttonReset.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonReset.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonReset.Location = new System.Drawing.Point(23, 174);
+            this.buttonReset.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonReset.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonReset.Location = new System.Drawing.Point(23, 62);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(360, 50);
@@ -526,6 +448,106 @@
             this.buttonReset.Text = "Clear Board";
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // pictureMorpion
+            // 
+            this.pictureMorpion.ErrorImage = null;
+            this.pictureMorpion.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
+            this.pictureMorpion.InitialImage = null;
+            this.pictureMorpion.Location = new System.Drawing.Point(82, 199);
+            this.pictureMorpion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureMorpion.Name = "pictureMorpion";
+            this.pictureMorpion.Size = new System.Drawing.Size(60, 60);
+            this.pictureMorpion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMorpion.TabIndex = 2;
+            this.pictureMorpion.TabStop = false;
+            // 
+            // pictureX
+            // 
+            this.pictureX.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureX.ErrorImage = null;
+            this.pictureX.Image = global::Jeu_du_Morpion.Properties.Resources.X_tic_tac_toe;
+            this.pictureX.InitialImage = null;
+            this.pictureX.Location = new System.Drawing.Point(82, 42);
+            this.pictureX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureX.Name = "pictureX";
+            this.pictureX.Size = new System.Drawing.Size(60, 60);
+            this.pictureX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureX.TabIndex = 1;
+            this.pictureX.TabStop = false;
+            // 
+            // pictureO
+            // 
+            this.pictureO.ErrorImage = null;
+            this.pictureO.Image = global::Jeu_du_Morpion.Properties.Resources.O_tic_tac_toe;
+            this.pictureO.InitialImage = null;
+            this.pictureO.Location = new System.Drawing.Point(82, 121);
+            this.pictureO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureO.Name = "pictureO";
+            this.pictureO.Size = new System.Drawing.Size(60, 60);
+            this.pictureO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureO.TabIndex = 0;
+            this.pictureO.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = global::Jeu_du_Morpion.Properties.Resources.pngwing_com__1_;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(517, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureMinimizer
+            // 
+            this.pictureMinimizer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureMinimizer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureMinimizer.ErrorImage = null;
+            this.pictureMinimizer.Image = global::Jeu_du_Morpion.Properties.Resources.minimizar;
+            this.pictureMinimizer.InitialImage = null;
+            this.pictureMinimizer.Location = new System.Drawing.Point(853, 0);
+            this.pictureMinimizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureMinimizer.Name = "pictureMinimizer";
+            this.pictureMinimizer.Size = new System.Drawing.Size(29, 30);
+            this.pictureMinimizer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMinimizer.TabIndex = 2;
+            this.pictureMinimizer.TabStop = false;
+            this.pictureMinimizer.Click += new System.EventHandler(this.pictureMinimizer_Click);
+            // 
+            // pictureFermer
+            // 
+            this.pictureFermer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureFermer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureFermer.ErrorImage = null;
+            this.pictureFermer.Image = global::Jeu_du_Morpion.Properties.Resources.Capture;
+            this.pictureFermer.InitialImage = null;
+            this.pictureFermer.Location = new System.Drawing.Point(882, 0);
+            this.pictureFermer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureFermer.Name = "pictureFermer";
+            this.pictureFermer.Size = new System.Drawing.Size(29, 30);
+            this.pictureFermer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureFermer.TabIndex = 1;
+            this.pictureFermer.TabStop = false;
+            this.pictureFermer.Click += new System.EventHandler(this.pictureFermer_Click);
+            // 
+            // pictureIcon
+            // 
+            this.pictureIcon.BackColor = System.Drawing.Color.GhostWhite;
+            this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureIcon.ErrorImage = null;
+            this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_vide;
+            this.pictureIcon.InitialImage = null;
+            this.pictureIcon.Location = new System.Drawing.Point(0, 0);
+            this.pictureIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(29, 30);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureIcon.TabIndex = 0;
+            this.pictureIcon.TabStop = false;
             // 
             // Form1
             // 
@@ -537,6 +559,7 @@
             this.Controls.Add(this.panelScore);
             this.Controls.Add(this.panelGame);
             this.Controls.Add(this.panelToolBar);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -545,9 +568,6 @@
             this.Text = "Jeu du Morpion";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelToolBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
             this.panelGame.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Box3_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box2_3)).EndInit();
@@ -559,12 +579,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Box1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Box1_1)).EndInit();
             this.panelScore.ResumeLayout(false);
+            this.panelSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BoxReset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMorpion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureO)).EndInit();
-            this.panelSettings.ResumeLayout(false);
-            this.panelSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BoxReset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -604,6 +627,7 @@
         private System.Windows.Forms.Button buttonOptions;
         private System.Windows.Forms.Button buttonAide;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

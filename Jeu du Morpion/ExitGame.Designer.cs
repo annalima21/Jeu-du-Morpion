@@ -42,25 +42,26 @@ namespace Jeu_du_Morpion
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.pictureIcon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 24);
+            this.panel1.Size = new System.Drawing.Size(360, 30);
             this.panel1.TabIndex = 2;
             // 
             // pictureIcon
             // 
+            this.pictureIcon.BackColor = System.Drawing.Color.GhostWhite;
             this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureIcon.ErrorImage = null;
             this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_ico;
             this.pictureIcon.InitialImage = null;
             this.pictureIcon.Location = new System.Drawing.Point(0, 0);
-            this.pictureIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureIcon.Name = "pictureIcon";
-            this.pictureIcon.Size = new System.Drawing.Size(22, 24);
+            this.pictureIcon.Size = new System.Drawing.Size(29, 30);
             this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureIcon.TabIndex = 0;
             this.pictureIcon.TabStop = false;
@@ -68,12 +69,11 @@ namespace Jeu_du_Morpion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam Libre", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(29, 55);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(39, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 42);
+            this.label1.Size = new System.Drawing.Size(283, 44);
             this.label1.TabIndex = 11;
             this.label1.Text = "Leave Game?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -81,12 +81,12 @@ namespace Jeu_du_Morpion
             // buttonYes
             // 
             this.buttonYes.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonYes.Font = new System.Drawing.Font("Miriam Mono CLM", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonYes.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonYes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonYes.Location = new System.Drawing.Point(161, 120);
-            this.buttonYes.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonYes.Location = new System.Drawing.Point(198, 148);
+            this.buttonYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonYes.Name = "buttonYes";
-            this.buttonYes.Size = new System.Drawing.Size(75, 39);
+            this.buttonYes.Size = new System.Drawing.Size(117, 48);
             this.buttonYes.TabIndex = 10;
             this.buttonYes.Text = "YES";
             this.buttonYes.UseVisualStyleBackColor = false;
@@ -95,12 +95,12 @@ namespace Jeu_du_Morpion
             // buttonNo
             // 
             this.buttonNo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonNo.Font = new System.Drawing.Font("Miriam Mono CLM", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonNo.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonNo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonNo.Location = new System.Drawing.Point(31, 120);
-            this.buttonNo.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonNo.Location = new System.Drawing.Point(41, 148);
+            this.buttonNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNo.Name = "buttonNo";
-            this.buttonNo.Size = new System.Drawing.Size(75, 39);
+            this.buttonNo.Size = new System.Drawing.Size(117, 48);
             this.buttonNo.TabIndex = 9;
             this.buttonNo.Text = "NO";
             this.buttonNo.UseVisualStyleBackColor = false;
@@ -108,14 +108,15 @@ namespace Jeu_du_Morpion
             // 
             // ExitGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(270, 179);
+            this.ClientSize = new System.Drawing.Size(360, 220);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonYes);
             this.Controls.Add(this.buttonNo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ExitGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExitGame";

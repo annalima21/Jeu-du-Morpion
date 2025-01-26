@@ -43,9 +43,9 @@
             this.buttonChoiceX = new System.Windows.Forms.Button();
             this.buttonChoiceO = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.BoxChoixO = new System.Windows.Forms.PictureBox();
             this.BoxChoixX = new System.Windows.Forms.PictureBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.panelToolBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMinimizer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFermer)).BeginInit();
@@ -57,8 +57,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(31, 43);
+            this.label1.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.Location = new System.Drawing.Point(70, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 34);
             this.label1.TabIndex = 22;
@@ -68,7 +68,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox1.Location = new System.Drawing.Point(52, 80);
+            this.checkBox1.Location = new System.Drawing.Point(91, 82);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(146, 30);
             this.checkBox1.TabIndex = 20;
@@ -80,7 +80,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox2.Location = new System.Drawing.Point(52, 106);
+            this.checkBox2.Location = new System.Drawing.Point(90, 113);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(174, 30);
             this.checkBox2.TabIndex = 21;
@@ -91,8 +91,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(6, 140);
+            this.label2.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.Location = new System.Drawing.Point(45, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(249, 34);
             this.label2.TabIndex = 23;
@@ -102,7 +102,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox3.Location = new System.Drawing.Point(68, 173);
+            this.checkBox3.Location = new System.Drawing.Point(107, 177);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(90, 30);
             this.checkBox3.TabIndex = 24;
@@ -114,7 +114,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox4.Location = new System.Drawing.Point(68, 199);
+            this.checkBox4.Location = new System.Drawing.Point(107, 203);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(118, 30);
             this.checkBox4.TabIndex = 25;
@@ -126,7 +126,7 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox6.Location = new System.Drawing.Point(68, 249);
+            this.checkBox6.Location = new System.Drawing.Point(107, 253);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(118, 30);
             this.checkBox6.TabIndex = 27;
@@ -139,7 +139,8 @@
             this.buttonMode.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonMode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMode.Font = new System.Drawing.Font("Miriam Mono CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonMode.Location = new System.Drawing.Point(72, 441);
+            this.buttonMode.ForeColor = System.Drawing.Color.Black;
+            this.buttonMode.Location = new System.Drawing.Point(111, 445);
             this.buttonMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMode.Name = "buttonMode";
             this.buttonMode.Size = new System.Drawing.Size(106, 35);
@@ -150,7 +151,7 @@
             // 
             // panelToolBar
             // 
-            this.panelToolBar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelToolBar.BackColor = System.Drawing.Color.DarkBlue;
             this.panelToolBar.Controls.Add(this.pictureMinimizer);
             this.panelToolBar.Controls.Add(this.pictureFermer);
             this.panelToolBar.Controls.Add(this.pictureIcon);
@@ -158,7 +159,7 @@
             this.panelToolBar.Location = new System.Drawing.Point(0, 0);
             this.panelToolBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelToolBar.Name = "panelToolBar";
-            this.panelToolBar.Size = new System.Drawing.Size(263, 30);
+            this.panelToolBar.Size = new System.Drawing.Size(328, 30);
             this.panelToolBar.TabIndex = 30;
             // 
             // pictureMinimizer
@@ -168,7 +169,7 @@
             this.pictureMinimizer.ErrorImage = null;
             this.pictureMinimizer.Image = global::Jeu_du_Morpion.Properties.Resources.minimizar;
             this.pictureMinimizer.InitialImage = null;
-            this.pictureMinimizer.Location = new System.Drawing.Point(205, 0);
+            this.pictureMinimizer.Location = new System.Drawing.Point(270, 0);
             this.pictureMinimizer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureMinimizer.Name = "pictureMinimizer";
             this.pictureMinimizer.Size = new System.Drawing.Size(29, 30);
@@ -183,7 +184,7 @@
             this.pictureFermer.ErrorImage = null;
             this.pictureFermer.Image = global::Jeu_du_Morpion.Properties.Resources.Capture;
             this.pictureFermer.InitialImage = null;
-            this.pictureFermer.Location = new System.Drawing.Point(234, 0);
+            this.pictureFermer.Location = new System.Drawing.Point(299, 0);
             this.pictureFermer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureFermer.Name = "pictureFermer";
             this.pictureFermer.Size = new System.Drawing.Size(29, 30);
@@ -194,6 +195,7 @@
             // 
             // pictureIcon
             // 
+            this.pictureIcon.BackColor = System.Drawing.Color.GhostWhite;
             this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureIcon.ErrorImage = null;
             this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_ico;
@@ -211,7 +213,7 @@
             this.buttonChoiceX.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonChoiceX.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChoiceX.Font = new System.Drawing.Font("Miriam Mono CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonChoiceX.Location = new System.Drawing.Point(52, 325);
+            this.buttonChoiceX.Location = new System.Drawing.Point(66, 329);
             this.buttonChoiceX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChoiceX.Name = "buttonChoiceX";
             this.buttonChoiceX.Size = new System.Drawing.Size(35, 35);
@@ -225,7 +227,7 @@
             this.buttonChoiceO.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonChoiceO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChoiceO.Font = new System.Drawing.Font("Miriam Mono CLM", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonChoiceO.Location = new System.Drawing.Point(172, 325);
+            this.buttonChoiceO.Location = new System.Drawing.Point(220, 329);
             this.buttonChoiceO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChoiceO.Name = "buttonChoiceO";
             this.buttonChoiceO.Size = new System.Drawing.Size(35, 35);
@@ -237,12 +239,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.Location = new System.Drawing.Point(6, 281);
+            this.label3.Font = new System.Drawing.Font("Miriam Mono CLM", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(45, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(249, 34);
             this.label3.TabIndex = 33;
             this.label3.Text = "Icones Jouers";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.checkBox5.Location = new System.Drawing.Point(107, 228);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(90, 30);
+            this.checkBox5.TabIndex = 36;
+            this.checkBox5.Text = "Hard";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // BoxChoixO
             // 
@@ -250,7 +264,7 @@
             this.BoxChoixO.ErrorImage = null;
             this.BoxChoixO.Image = global::Jeu_du_Morpion.Properties.Resources.O_tic_tac_toe;
             this.BoxChoixO.InitialImage = null;
-            this.BoxChoixO.Location = new System.Drawing.Point(158, 365);
+            this.BoxChoixO.Location = new System.Drawing.Point(206, 369);
             this.BoxChoixO.Name = "BoxChoixO";
             this.BoxChoixO.Size = new System.Drawing.Size(60, 60);
             this.BoxChoixO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,30 +277,18 @@
             this.BoxChoixX.ErrorImage = null;
             this.BoxChoixX.Image = global::Jeu_du_Morpion.Properties.Resources.X_tic_tac_toe;
             this.BoxChoixX.InitialImage = null;
-            this.BoxChoixX.Location = new System.Drawing.Point(37, 365);
+            this.BoxChoixX.Location = new System.Drawing.Point(51, 369);
             this.BoxChoixX.Name = "BoxChoixX";
             this.BoxChoixX.Size = new System.Drawing.Size(60, 60);
             this.BoxChoixX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BoxChoixX.TabIndex = 34;
             this.BoxChoixX.TabStop = false;
             // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Miriam Mono CLM", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.checkBox5.Location = new System.Drawing.Point(68, 224);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(90, 30);
-            this.checkBox5.TabIndex = 36;
-            this.checkBox5.Text = "Hard";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
-            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 495);
+            this.ClientSize = new System.Drawing.Size(328, 495);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.BoxChoixO);
             this.Controls.Add(this.BoxChoixX);

@@ -39,7 +39,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.pictureIcon);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -51,6 +51,7 @@
             // 
             // pictureIcon
             // 
+            this.pictureIcon.BackColor = System.Drawing.Color.GhostWhite;
             this.pictureIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureIcon.ErrorImage = null;
             this.pictureIcon.Image = global::Jeu_du_Morpion.Properties.Resources.tic_tac_toe_ico;
@@ -66,12 +67,12 @@
             // buttonNo
             // 
             this.buttonNo.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonNo.Font = new System.Drawing.Font("Miriam Mono CLM", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonNo.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonNo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonNo.Location = new System.Drawing.Point(41, 148);
             this.buttonNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNo.Name = "buttonNo";
-            this.buttonNo.Size = new System.Drawing.Size(100, 48);
+            this.buttonNo.Size = new System.Drawing.Size(117, 48);
             this.buttonNo.TabIndex = 6;
             this.buttonNo.Text = "NO";
             this.buttonNo.UseVisualStyleBackColor = false;
@@ -80,12 +81,12 @@
             // buttonYes
             // 
             this.buttonYes.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonYes.Font = new System.Drawing.Font("Miriam Mono CLM", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonYes.Font = new System.Drawing.Font("Miriam Mono CLM", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonYes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonYes.Location = new System.Drawing.Point(215, 148);
+            this.buttonYes.Location = new System.Drawing.Point(211, 148);
             this.buttonYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonYes.Name = "buttonYes";
-            this.buttonYes.Size = new System.Drawing.Size(100, 48);
+            this.buttonYes.Size = new System.Drawing.Size(117, 48);
             this.buttonYes.TabIndex = 7;
             this.buttonYes.Text = "YES";
             this.buttonYes.UseVisualStyleBackColor = false;
@@ -94,11 +95,11 @@
             // labelNewGame
             // 
             this.labelNewGame.AutoSize = true;
-            this.labelNewGame.Font = new System.Drawing.Font("Miriam Libre", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNewGame.Font = new System.Drawing.Font("Miriam Mono CLM", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelNewGame.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.labelNewGame.Location = new System.Drawing.Point(55, 65);
+            this.labelNewGame.Location = new System.Drawing.Point(67, 65);
             this.labelNewGame.Name = "labelNewGame";
-            this.labelNewGame.Size = new System.Drawing.Size(249, 53);
+            this.labelNewGame.Size = new System.Drawing.Size(235, 44);
             this.labelNewGame.TabIndex = 8;
             this.labelNewGame.Text = "New Game?";
             this.labelNewGame.Click += new System.EventHandler(this.labelNewGame_Click);
@@ -113,7 +114,7 @@
             this.Controls.Add(this.buttonNo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewGame";

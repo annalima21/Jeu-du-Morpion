@@ -486,13 +486,15 @@ namespace Jeu_du_Morpion
             selectedPictureBox = (PictureBox)panelGame.Controls[nomPictureBox];
             if (selectedPictureBox.Image == null)
             {
+                pictureX.BackColor = SystemColors.Window;
+                pictureO.BackColor = Color.FromArgb(200, 255, 182, 193);
                 Thread.Sleep(500);
                 selectedPictureBox.Image = pictureO.Image; // Ou pictureX.Image selon le choix
                 selectedPictureBox.Enabled = false;
                 SoundO();
-                Thread.Sleep(500);
                 tableau[i - 1, j - 1] = 'O';
                 ImprimirTableau();
+                if (Score() == true) return;
                 selectedPictureBox.Refresh();
                 Checker = !Checker; // Alterne le joueur
                 return; // Quitte la fonction après avoir joué
@@ -614,8 +616,8 @@ namespace Jeu_du_Morpion
             Console.WriteLine("Mode Insane...");
 
             int meilleurScore = int.MinValue; // Initialise le score maximum
-            int meilleurX = -1, meilleurY = -1; // Coordonnées du meilleur mouvement
-
+            int meilleurX = -1, meilleurY = -1; // Coordonnées du meilleur mouvement7
+            
             // Parcourir toutes les cases du tableau
             for (int i = 0; i < 3; i++)
             {
@@ -659,6 +661,7 @@ namespace Jeu_du_Morpion
             }
         }
 
+        /// MINIMAX
         int Minimax(bool isMaximizing)
         {
             // Vérifie si un joueur a gagné ou si le jeu est une égalité
@@ -741,7 +744,8 @@ namespace Jeu_du_Morpion
             }
             return true; // Toutes les cases sont remplies
         }
-
+        ///END MINIMAX
+        
         void Jouer(int x, int y)
         {
             i = 1;
@@ -765,9 +769,15 @@ namespace Jeu_du_Morpion
                     selectedPictureBox.Image = pictureX.Image; // Affecte l'image associée au joueur X
                     selectedPictureBox.Enabled = false; // Désactive la PictureBox (type : bool)
                     SoundX(); // Appelle la méthode SoundX() pour jouer un son (type : void)
-                    Thread.Sleep(500);
                     tableau[x - 1, y - 1] = 'X'; //Actualiser tableau avec le choix du jouer
                     ImprimirTableau();
+                    pictureO.BackColor = SystemColors.Window;
+                    pictureX.BackColor = Color.FromArgb(200, 173, 255, 173);
+                    Thread.Sleep(500);
+                    if (Score() == true) return;
+                    pictureX.BackColor = SystemColors.Window;
+                    pictureO.BackColor = Color.FromArgb(200, 255, 182, 193);
+                    Thread.Sleep(500);
                     // `count` (type : int) - Compteur des coups joués
                     count++; // Incrémente le compteur de coups
                     Checker = !Checker;
@@ -778,15 +788,19 @@ namespace Jeu_du_Morpion
                     selectedPictureBox.Image = pictureO.Image; // Affecte l'image associée au joueur O
                     selectedPictureBox.Enabled = false; // Désactive la PictureBox (type : bool)
                     SoundO();
-                    Thread.Sleep(500);
                     tableau[x - 1, y - 1] = 'O';//Actualiser tableau avec le choix du jouer
                     ImprimirTableau();
+                    pictureX.BackColor = SystemColors.Window;
+                    pictureO.BackColor = Color.FromArgb(200, 255, 182, 193);
+                    Thread.Sleep(500);
+                    if (Score() == true) return;
                     Checker = !Checker;
                 }
 
                 // Si le mode est "joueur contre ordinateur" et que c'est au tour de l'ordinateur de jouer
-                while (selectedMode == 1 && !Checker && count <= 4)
-                {
+                while (selectedMode == 1 && !Checker)
+                { 
+
                     if (selectedLevel == 1)
                     {
                         EasyOrdinateur(); // Appelle la méthode `Ordinateur()` (type : void) pour exécuter le tour du CPU
@@ -804,7 +818,7 @@ namespace Jeu_du_Morpion
 
                 }
 
-                Score();
+               // Score();
             }
         }
 
@@ -848,7 +862,6 @@ namespace Jeu_du_Morpion
         {
             // ButtonBox1_1();
             Jouer(1, 1);
-
         }
 
         private void Box1_2_Click(object sender, EventArgs e)
@@ -905,6 +918,11 @@ namespace Jeu_du_Morpion
         }
         private void buttonOptions_Click(object sender, EventArgs e)
         {
+            if (i == 1)
+            {
+                MessageBox.Show("Veuillez d'abord terminer la partie en cours !", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Empêche le démarrage d'une nouvelle partie
+            }
             OpenOptions();
         }
 
@@ -916,19 +934,20 @@ namespace Jeu_du_Morpion
         {
             if (i == 1)
             {
-                MessageBox.Show("Veuillez d'abord terminer la partie en cours !");
+                MessageBox.Show("Veuillez d'abord terminer la partie en cours !", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Empêche le démarrage d'une nouvelle partie
             }
             BoxWork();
             ResetBox();
         }
+        public int previousMode = 1; // PvC
+        public int previousLevel = 3; // Hard
 
         private void OpenOptions()
         {
-            Options options = new Options();
+            Options options = new Options(previousMode, previousLevel);
             if (options.ShowDialog() == DialogResult.OK)
             {
-
                 pictureX.Image = options.ImageChoisie1;
                 pictureO.Image = options.ImageChoisie2;
                 //timer.Start();
@@ -943,9 +962,10 @@ namespace Jeu_du_Morpion
                 else if (selectedLevel == 3) label3.Text = "Hard Level";
                 else if (selectedLevel == 4) label3.Text = "Insane Level";
             }
-
-
+            previousMode = options.mode;
+            previousLevel = options.level;
         }
+
         private bool CheckImages()
         {
             // Vérifier que les PictureBox "pictureO" et "pictureX" contiennent des images
@@ -1010,6 +1030,8 @@ namespace Jeu_du_Morpion
             }
 
         }
+
+
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
