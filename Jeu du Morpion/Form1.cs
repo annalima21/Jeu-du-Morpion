@@ -940,12 +940,17 @@ namespace Jeu_du_Morpion
             BoxWork();
             ResetBox();
         }
+        static string pathX = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "X_tic-tac-toe.png"); // Chemin image X
+        static string pathO = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "O_tic-tac-toe.png"); // Chemin Image O
+
         public int previousMode = 1; // PvC
         public int previousLevel = 3; // Hard
+        public Image previousImageX = Image.FromFile(pathX); // Image X defaut
+        public Image previousImageO = Image.FromFile(pathO); // Image O defaut
 
         private void OpenOptions()
         {
-            Options options = new Options(previousMode, previousLevel);
+            Options options = new Options(previousMode, previousLevel, previousImageX, previousImageO);
             if (options.ShowDialog() == DialogResult.OK)
             {
                 pictureX.Image = options.ImageChoisie1;
@@ -964,6 +969,8 @@ namespace Jeu_du_Morpion
             }
             previousMode = options.mode;
             previousLevel = options.level;
+            previousImageX = options.ImageChoisie1;
+            previousImageO = options.ImageChoisie2;
         }
 
         private bool CheckImages()

@@ -245,3 +245,7 @@ C:\Users\userlocal\Downloads\Jeu du Morpion\bin\Debug\Jeu du Morpion.exe.manifes
 C:\Users\userlocal\Downloads\Jeu du Morpion\bin\Debug\Jeu du Morpion.application
 C:\Users\userlocal\Downloads\Jeu du Morpion\obj\Debug\Jeu du Morpion.exe.manifest
 C:\Users\userlocal\Downloads\Jeu du Morpion\obj\Debug\Jeu du Morpion.application
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.exe.manifest
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\bin\Debug\Jeu du Morpion.application
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.exe.manifest
+C:\Users\userlocal\Desktop\Jeu-du-Morpion\Jeu du Morpion\obj\Debug\Jeu du Morpion.application

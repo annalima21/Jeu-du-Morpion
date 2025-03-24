@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jeu du Morpion.exe" size="1095672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jeu du Morpion.exe" size="1096184">
       <assemblyIdentity name="Jeu du Morpion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K9U294Ku33bFdCUUG4gFG/2F6NU1iLui/ADSEGBvCtE=</dsig:DigestValue>
+        <dsig:DigestValue>nGujuI52LQjP/f79VyGvwZXmLsfY+JOlqhfS5T+9axg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

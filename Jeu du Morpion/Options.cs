@@ -21,13 +21,15 @@ namespace Jeu_du_Morpion
         public string image2Path;
 
 
-        public Options(int previousMode, int previousLevel)
+        public Options(int previousMode, int previousLevel, Image previousImageX, Image previousImageO)
         {
             InitializeComponent();
 
             // Restaurar seleções anteriores
             mode = previousMode;
             level = previousLevel;
+            BoxChoixX.Image = previousImageX;
+            BoxChoixO.Image = previousImageO;
 
             RestorePreviousSelections();
         }
